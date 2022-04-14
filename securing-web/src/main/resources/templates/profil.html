@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head>
+        <title>Profil</title>
+    </head>
+    <body>
+		<div style="color: red" th:text="${errorChangingPassword}"></div>
+        <form th:action="@{/profil}" method="post" th:object="${userProperties}">
+            <div><label> Ancien Password: <input type="password" name="oldPassword" th:field="*{password}"/> </label></div>
+            <div><label> Nouveau Password: <input type="password" name="newPassword" th:field="*{newPassword}"/> </label></div>
+
+            <div><input type="submit" value="Modifier"/></div>
+        </form>
+        
+		<a href="hello">Back</a>
+    </body>
+</html>

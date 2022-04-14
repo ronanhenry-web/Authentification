@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head>
+        <title>My Account</title>
+    </head>
+    <body>
+        <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+            <table>
+      <tr>
+        <th>Date</th>
+        <th>Action</th>
+        <th>IP Adress</th>
+      </tr>
+      <tr th:each="log : ${logs}">
+        <td th:text="${log.date}">-</td>
+        <td th:text="${log.action}">Refused</td>
+        <td th:text="${log.ip}">-</td>
+      </tr>
+    </table>
+  
+    <p>
+      <a href="../hello.html" th:href="@{/}">Return to account</a>
+    </p>
+    </body>
+</html>
