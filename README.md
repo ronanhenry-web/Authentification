@@ -1,4 +1,4 @@
-# Projet Java
+# Projet Authentification
 
 Qui a pour objectif de gérer les logs d'une application
 
