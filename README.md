@@ -7,6 +7,7 @@ Qui a pour objectif de gérer les logs d'une application
 Le projet a été créé sous Intellij, pour le démarrer suivre les étapes suivantes.
 
 - Cloner le projet
+- Avoir une BDD et suivre les consignes du fichier properties + les erreurs SQL indiquant de créer des tables
 - Compiler le fichier main
 
 ## Sources & Outils
